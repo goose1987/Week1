@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Hoang Pham
+ * 4/2/2014
+ * window phone controlled quad
+ * 
+ * */
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -11,13 +19,15 @@ using Microsoft.Devices.Sensors;
 using Microsoft.Xna.Framework;
 using equilibrium.Resources;
 
+using kuntakinte;
+
 
 namespace equilibrium
 {
     public partial class MainPage : PhoneApplicationPage
     {
         Motion motion;
-
+        flightbox mflightbox;
 
         // Constructor
         public MainPage()
@@ -48,6 +58,7 @@ namespace equilibrium
                 MessageBox.Show("unable to start the Motion API.");
             }
 
+            flightbox mflightbox = new flightbox(); // initialize a new flightbox
             
         }
         
