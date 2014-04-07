@@ -26,13 +26,19 @@ namespace equilibrium
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        Motion motion;
-        flightbox mflightbox;
+        private Motion motion;
+        private flightbox mflightbox;
+        private btConManager mConManager;
 
         // Constructor
         public MainPage()
         {
             InitializeComponent();
+
+            //new bluetooth manager
+            mConManager = new btConManager();
+     
+
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
